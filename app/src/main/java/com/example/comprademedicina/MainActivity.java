@@ -33,23 +33,26 @@ public class MainActivity extends AppCompatActivity {
     String ConnectionResult="";
     List<ListElement> elements;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.medicina_buscar);
 
-        //Prueba del Spinner
-        /*String[]opciones={"Antiácidos y antiulcerosos","Antialérgicos","Antidiarreicos y laxantes","Antiinfecciosos","Antiinflamatorios","Antipiréticos","Antitusivos y mucolíticos"};
-        spinner=(Spinner)findViewById(R.id.tipoMedicina);
-        ArrayAdapter<CharSequence> adapter = new ArrayAdapter(this, R.layout.config_spinner);
-        List<CharSequence> adapter=new List();
-        spinner.setAdapter(adapter);*/
         medicina=(EditText)findViewById(R.id.edtMedicina);
         spinner=(Spinner)findViewById(R.id.tipoMedicina);
-        LlenarSpinner();
+
+        //Prueba del Spinner
+        String[]opciones={"Antiácidos","Antialérgicos","Antidiarreicos","Antiinfecciosos","Antiinflamatorios","Antipiréticos","Antitusivos"};
+        spinner=(Spinner)findViewById(R.id.tipoMedicina);
+        ArrayAdapter adap = new ArrayAdapter(this, R.layout.config_spinner, opciones);
+        spinner.setAdapter(adap);
+        //LlenarSpinner();
         init();
     }
-
+    //Llenar spiner de base de datos
+/*
     public void LlenarSpinner(){
         try{
             con = connectionClass(ConnectionClass.un.toString(),ConnectionClass.pass.toString(),ConnectionClass.db.toString(),ConnectionClass.ip.toString());
@@ -90,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
     public void Vercarro(View v){
         Intent i=new Intent(this, Medicina_Carro.class);
         startActivity(i);
-    }
+    }*/
 
     public void init(){
         elements=new ArrayList<>();
-        elements.add(new ListElement("#ED538E", "Acetaminofen", "Si", "$7.5"));
-        elements.add(new ListElement("#ED538E", "Pythonb", "Si", "$7.5"));
-        elements.add(new ListElement("#ED538E", "sdfsdfn", "Si", "$7.5"));
-        elements.add(new ListElement("#ED538E", "sdfsdfsdfn", "Si", "$7.5"));
+        elements.add(new ListElement(R.drawable.acetaminofen, "Acetaminofen", "Ayuda al dolor de cabeza", "$7.599"));
+        elements.add(new ListElement(R.drawable.alkasetlzer, "Alkaseltzer", "Para la digestion", "$4.99"));
+        elements.add(new ListElement(R.drawable.panadol, "Panadol", "Para el dolor de cuerpo", "$7.55"));
+        elements.add(new ListElement(R.drawable.virogripam, "Virogrip", "Ayuda al resfriado", "$2.54"));
 
         ListAdapter listAdapter=new ListAdapter(elements, this, new ListAdapter.OnItemClickListener() {
             @Override

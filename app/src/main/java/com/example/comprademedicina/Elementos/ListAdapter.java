@@ -3,11 +3,15 @@ package com.example.comprademedicina.Elementos;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.comprademedicina.R;
 import java.util.List;
@@ -47,7 +51,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
-        TextView name, city;
+        TextView name, city, precio;
 
         ViewHolder(View itemView){
             super(itemView);
@@ -56,7 +60,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             city=itemView.findViewById(R.id.cityTextView);
         }
         void bindData(final ListElement item){
-            iconImage.setColorFilter(Color.parseColor(item.getImgMedicina()), PorterDuff.Mode.SRC_IN);
+            iconImage.setImageResource(item.getImgMedicina());
+            //iconImage.setColorFilter(Color.parseColor(item.getImgMedicina()), PorterDuff.Mode.SRC_IN);
             name.setText(item.getNombre());
             city.setText(item.getDescripcion());
             itemView.setOnClickListener(new View.OnClickListener() {

@@ -3,23 +3,22 @@ package com.example.comprademedicina.Elementos;
 import java.io.Serializable;
 
 public class ListElement implements Serializable {
-    public String imgMedicina;
+    public int imgMedicina;
     public String nombre;
     public String descripcion;
     public String precio;
 
-    public ListElement(String imgMedicina, String nombre, String descripcion, String precio) {
+    public ListElement(int imgMedicina, String nombre, String descripcion, String precio) {
         this.imgMedicina = imgMedicina;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
     }
 
-    public String getImgMedicina() {
+    public int getImgMedicina() {
         return imgMedicina;
     }
-
-    public void setImgMedicina(String imgMedicina) {
+    public void setImgMedicina(int imgMedicina) {
         this.imgMedicina = imgMedicina;
     }
 

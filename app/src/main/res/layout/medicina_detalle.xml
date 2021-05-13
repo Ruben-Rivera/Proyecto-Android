@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toTopOf="@+id/txtDetalle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/txtDetalle"
@@ -69,7 +70,8 @@
                 android:layout_gravity="center"
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
-                app:srcCompat="@drawable/ic_android_black_24dp" />
+                android:src="@drawable/ic_android_black_24dp"
+                />
         </RelativeLayout>
 
         <LinearLayout
