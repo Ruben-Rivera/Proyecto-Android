@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Compra de la Medicina</string>
+
+    Medicina_Buscar
+    <string name="logo">Imagen de la empresa</string>
+    <string name="busca">Buscar:</string>
+    <string name="btnBuscar">Buscar</string>
+    <string name="buscarMedicina">Ingrese medicamento</string>
+    <string name="clasificacion">Tipo:</string>
+
+    Medicina_Detalle
+    <string name="cantidad">Cantidad:</string>
+    <string name="txtCantidad">Ingrese la cantidad a comprar</string>
+    <string name="detalle">Detalle del medicinamento</string>
+    <string name="txtAgregar">Agregar al Carrito</string>
+    <string name="btnAgregar">Agregar</string>
+    <string name="btnOtro">Ver otro</string>
+    <string name="btnVercarro">Ver Carrito</string>
+
+    Medicina_Carrito
+    <string name="btnProcesar">Procesar</string>
+    <string name="carrito">Carrito de compras</string>
+
+
+</resources>
