@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
     //Llenar spiner de base de datos
-/*
-    public void LlenarSpinner(){
+    /*public void LlenarSpinner(){
         try{
             con = connectionClass(ConnectionClass.un.toString(),ConnectionClass.pass.toString(),ConnectionClass.db.toString(),ConnectionClass.ip.toString());
             String query ="select * from Productos";
