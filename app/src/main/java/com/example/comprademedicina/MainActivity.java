@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity {
         rd1.setChecked(true);
 
         txmedicina = (AutoCompleteTextView)findViewById(R.id.txtMedicina);
-        txmedicina.setThreshold(2);
-        txmedicina.setAdapter(adap);
-
+        /*txmedicina.setThreshold(2);
+        txmedicina.setAdapter(adap);*/
 
         txmedicina.addTextChangedListener(new TextWatcher() {
             @Override
@@ -65,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Prueba del Spinner
-        String[] opciones = new String[] {"Tipo de medicina","Antiácidos", "Antialérgicos", "Antidiarreicos", "Antiinfecciosos"};
+       // String[] opciones = new String[] {"Tipo de medicina","Antiácidos", "Antialérgicos", "Antidiarreicos", "Antiinfecciosos"};
         /*spinner = (Spinner) findViewById(R.id.tipoMedicina);*/
-        ArrayAdapter<String> adap = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, opciones);
+        //ArrayAdapter<String> adap = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, opciones);
        /* spinner.setAdapter(adap);
         //LlenarSpinner();*/
     }
@@ -114,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }*/
 
+    //Producto agregado al RecyclerView
     public void init() {
         elements = new ArrayList<>();
         elements.add(new ListElement(R.drawable.acetaminofen, "Acetaminofen", "Ayuda al dolor de cabeza", "$7.599", "Antiácidos"));
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
     }
-
+    //Producto seleccionado en nueva pantalla
     public void moveToDescription(ListElement item) {
         Intent intent = new Intent(this, Medicina_Detalle.class);
         intent.putExtra("ListElement", item);
@@ -155,5 +155,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         listAdapter.filtrar(filtrarLista);
+    }
+
+    public void VerCarrito(View v){
+        Intent intent = new Intent(this, Medicina_Carro.class);
+        //intent.putExtra("ListElement", item);
+        startActivity(intent);
     }
 }
