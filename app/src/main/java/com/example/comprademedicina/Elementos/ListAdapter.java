@@ -1,19 +1,17 @@
 package com.example.comprademedicina.Elementos;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.comprademedicina.R;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
@@ -48,7 +46,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position){
         holder.bindData(mData.get(position));
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView name, city, precio;
@@ -71,5 +68,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 }
             });
         }
+    }
+    public void filtrar(ArrayList<ListElement> filtroLista) {
+        this.mData=filtroLista;
+        notifyDataSetChanged();
     }
 }

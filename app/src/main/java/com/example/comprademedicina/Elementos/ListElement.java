@@ -7,12 +7,14 @@ public class ListElement implements Serializable {
     public String nombre;
     public String descripcion;
     public String precio;
+    public String tipo;
 
-    public ListElement(int imgMedicina, String nombre, String descripcion, String precio) {
+    public ListElement(int imgMedicina, String nombre, String descripcion, String precio, String tipo) {
         this.imgMedicina = imgMedicina;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.tipo=tipo;
     }
 
     public int getImgMedicina() {
@@ -44,5 +46,13 @@ public class ListElement implements Serializable {
 
     public void setPrecio(String precio) {
         this.precio = precio;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

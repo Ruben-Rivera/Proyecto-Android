@@ -5,8 +5,10 @@
     <string name="logo">Imagen de la empresa</string>
     <string name="busca">Buscar:</string>
     <string name="btnBuscar">Buscar</string>
-    <string name="buscarMedicina">Ingrese medicamento</string>
-    <string name="clasificacion">Tipo:</string>
+    <string name="buscarMedicina">Ingrese nombre o tipo del medicamento</string>
+    <string name="clasificacion">Buscar el medicamento por:</string>
+    <string name="rd1">Nombre</string>
+    <string name="rd2">Tipo de medicamento</string>
 
     Medicina_Detalle
     <string name="cantidad">Cantidad:</string>
@@ -20,6 +22,4 @@
     Medicina_Carrito
     <string name="btnProcesar">Procesar</string>
     <string name="carrito">Carrito de compras</string>
-
-
 </resources>
